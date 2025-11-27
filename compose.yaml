@@ -5,7 +5,8 @@ services:
             dockerfile: Dockerfile
             args:
                 WWWGROUP: '${WWWGROUP:-1000}'
-        image: ghcr.io/clesecq/cnampagnon/sail:latest
+        # https://github.com/orgs/community/discussions/5336
+        image: ghcr.io/<owner>/<repo>/sail:latest
         extra_hosts:
             - 'host.docker.internal:host-gateway'
         ports:
