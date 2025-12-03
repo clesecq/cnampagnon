@@ -21,7 +21,7 @@ final class User extends Authenticatable
      *
      * @var list<string>
      */
-    private $fillable = [
+    protected $fillable = [
         'name',
         'email',
         'password',
@@ -32,7 +32,7 @@ final class User extends Authenticatable
      *
      * @var list<string>
      */
-    private $hidden = [
+    protected $hidden = [
         'password',
         'two_factor_secret',
         'two_factor_recovery_codes',
@@ -44,7 +44,7 @@ final class User extends Authenticatable
      *
      * @return array<string, string>
      */
-    private function casts(): array
+    protected function casts(): array
     {
         return [
             'email_verified_at' => 'datetime',

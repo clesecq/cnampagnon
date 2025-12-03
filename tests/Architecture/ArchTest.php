@@ -4,5 +4,6 @@ arch()->preset()->php();
 arch()->preset()->security();
 arch()->preset()->laravel();
 arch()->preset()->strict()
-    ->ignoring("App\Http\Controllers\Controller");
+    ->ignoring("App\Http\Controllers\Controller")
+    ->ignoring("App\Models\User");
 
