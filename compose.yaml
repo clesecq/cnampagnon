@@ -6,12 +6,10 @@ services:
             args:
                 WWWGROUP: '${WWWGROUP:-1000}'
         # https://github.com/orgs/community/discussions/5336
-        image: ghcr.io/<owner>/<repo>/sail:latest
+        # TODO: change this with your username/repo:latest
+        image: ghcr.io/clesecq/laravel/sail:latest
         extra_hosts:
             - 'host.docker.internal:host-gateway'
-        ports:
-            - '${APP_PORT:-80}:8000'
-            - '${VITE_PORT:-5173}:${VITE_PORT:-5173}'
         environment:
             WWWUSER: '${WWWUSER:-1000}'
             LARAVEL_SAIL: 1
